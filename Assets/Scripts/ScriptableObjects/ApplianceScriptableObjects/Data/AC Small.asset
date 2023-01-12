@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4cd7aa8a20154a13a9b164b27853e55, type: 3}
+  m_Name: AC Small
+  m_EditorClassIdentifier: 
+  objectIcon: {fileID: 21300000, guid: eeb6b5e19ac9e49d284c66f64e520baf, type: 3}
+  objectName: Small
+  objectDescription: Air Conditioner
+  objectType: Appliance
+  objectPrefab: {fileID: 943824698328112956, guid: 0aaa16023d7afd04fb820330c2145ec9,
+    type: 3}
+  emissionRate: 0.03
+  emissionAmount: 0
+  purchaseCost: 1000
+  upkeepCost: 0
+  purchaseExperience: 30
+  greenPointExperience: 0
+  powerNeededRate: 2
+  powerNeededAmount: 0
+  happiness: 0
+  isTurnedOn: 0

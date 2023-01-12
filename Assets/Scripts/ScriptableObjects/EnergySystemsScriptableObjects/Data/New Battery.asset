@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c0690bc5f7e845fd84b213bef70e65f, type: 3}
+  m_Name: New Battery
+  m_EditorClassIdentifier: 
+  objectIcon: {fileID: 21300000, guid: db3130982a77c1748bd90b1c0134ca8c, type: 3}
+  objectName: Battery
+  objectType: Energy
+  objectDescription: 'A Home Battery saved power from energy systems, including Solar
+    Panels and Wind turbine, supports the load for your property.
+
+'
+  objectPrefab: {fileID: 8370443620778480978, guid: 0d6bfb1adcb2b4ba5b49fa49a3e914ca,
+    type: 3}
+  purchaseCost: 8000
+  sellPrice: 0
+  purchaseExperience: 150
+  fuelAmount: 0
+  batteryStorageAmount: 0
+  powerGeneratedRate: 9
+  powerGeneratedAmount: 0
+  efficiency: 90
+  emissionRate: 0
+  emissionGeneratedAmount: 0
+  powerInputRate: 0
+  powerOutputRate: 9
+  incomeRate: 0
+  upkeepCost: 0
+  isConnectedToSolarPanel: 0
+  isConnectedToChargeController: 0
+  isConnectedToInvertor: 0
+  isConnectedToWindTurbine: 0
+  isConnectedToBattery: 0
+  isTurnedOn: 0
+  isRunning: 0
+  purchaseFuelBtn: {fileID: 0}
+  maintenanceBtn: {fileID: 0}
+  objectWidth: 6
+  objectHeight: 8
+  objectLength: 2

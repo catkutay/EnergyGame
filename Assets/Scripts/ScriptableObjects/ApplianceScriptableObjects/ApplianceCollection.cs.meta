@@ -1,0 +1,17 @@
+fileFormatVersion: 2
+guid: 342a7ddb1ac2d4799826e1b49cc61603
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - acSO: {fileID: 11400000, guid: d274b57d486fe4b368536f840401691d, type: 2}
+  - lightSO: {fileID: 11400000, guid: db5fe4386c6a044909af8d63916a7d61, type: 2}
+  - fridgeSO: {fileID: 11400000, guid: 49d8d2771e3214c6d87b77eeadf0d492, type: 2}
+  - fanSO: {fileID: 11400000, guid: 28e3579627fc54d11afdfbf55f497397, type: 2}
+  - washingMachineSO: {fileID: 11400000, guid: 0c472c5a22bc34fbfbc5224ded86dbd0, type: 2}
+  - dryerSO: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

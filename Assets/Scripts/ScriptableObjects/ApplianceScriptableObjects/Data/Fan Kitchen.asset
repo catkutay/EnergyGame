@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf5bff7df6f844a6aede61253e77bc4, type: 3}
+  m_Name: Fan Kitchen
+  m_EditorClassIdentifier: 
+  objectIcon: {fileID: 21300000, guid: 4cc8bcaa39dafa140a88e5ac9dfdb4bf, type: 3}
+  objectName: Kitchen
+  objectDescription: Ceiling Fan
+  objectType: Appliance
+  objectPrefab: {fileID: 3721513724026873088, guid: 985ac9a55e549044eaa4bb5931ab8f9e,
+    type: 3}
+  emissionRate: 0
+  emissionAmount: 0
+  purchaseCost: 300
+  upkeepCost: 0
+  purchaseExperience: 0
+  greenPointExperience: 0
+  powerNeededRate: 0.08
+  powerNeededAmount: 0
+  happiness: 0
+  isTurnedOn: 0

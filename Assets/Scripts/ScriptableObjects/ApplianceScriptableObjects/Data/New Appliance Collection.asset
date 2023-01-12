@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 342a7ddb1ac2d4799826e1b49cc61603, type: 3}
+  m_Name: New Appliance Collection
+  m_EditorClassIdentifier: 
+  aCSmallSO: {fileID: 11400000, guid: 6ad6fada2059d83469c784b11d808a85, type: 2}
+  aCMediumSO: {fileID: 11400000, guid: d274b57d486fe4b368536f840401691d, type: 2}
+  aCLargeSO: {fileID: 11400000, guid: bee18f3c5f2bf3a41b628c88d4ea7176, type: 2}
+  washerSmallSO: {fileID: 11400000, guid: 0c472c5a22bc34fbfbc5224ded86dbd0, type: 2}
+  washerLargeSO: {fileID: 11400000, guid: 732919887acba5745a0a078626b4731a, type: 2}
+  lightLivingRoomSO: {fileID: 11400000, guid: c0c6be04466a7964f80c1f7beebc8cf9, type: 2}
+  lightKitchenSO: {fileID: 11400000, guid: 158428f8c481f1d4ba4c0573d7437c80, type: 2}
+  lightBedroomSO: {fileID: 11400000, guid: e02b9f43b524f3b4bb040f2f1107a26a, type: 2}
+  lightLaundrySO: {fileID: 11400000, guid: b1d424870c5af4c4da89b3ca27984141, type: 2}
+  fridgeSmallSO: {fileID: 11400000, guid: f090b074dc8fc43478e83bb816c2b273, type: 2}
+  fridgeLargeSO: {fileID: 11400000, guid: 49d8d2771e3214c6d87b77eeadf0d492, type: 2}
+  fanLivingRoomSO: {fileID: 11400000, guid: cd55007200aeafd4696d9b78a12fefbc, type: 2}
+  fanKitchenSO: {fileID: 11400000, guid: 13c5f7894fbd9324393312412c8c0e03, type: 2}
+  fanBedroomSO: {fileID: 11400000, guid: 109bba614cdb9474eaa60ebd96075e09, type: 2}

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cf5bff7df6f844a6aede61253e77bc4, type: 3}
+  m_Name: Fan Living Room
+  m_EditorClassIdentifier: 
+  objectIcon: {fileID: 21300000, guid: 4cc8bcaa39dafa140a88e5ac9dfdb4bf, type: 3}
+  objectName: Living Room
+  objectDescription: Ceiling Fan
+  objectType: Appliance
+  objectPrefab: {fileID: 6591379709412304967, guid: 898f633c3e07e6f468ca95eace71009b,
+    type: 3}
+  emissionRate: 0
+  emissionAmount: 0
+  purchaseCost: 500
+  upkeepCost: 0
+  purchaseExperience: 0
+  greenPointExperience: 0
+  powerNeededRate: 0.1
+  powerNeededAmount: 0
+  happiness: 0
+  isTurnedOn: 0

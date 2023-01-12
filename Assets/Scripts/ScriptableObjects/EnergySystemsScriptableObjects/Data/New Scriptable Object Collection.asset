@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567a03641675a4973826c111ba5d99d5, type: 3}
+  m_Name: New Scriptable Object Collection
+  m_EditorClassIdentifier: 
+  dieselGeneratorSO: {fileID: 11400000, guid: d63909311cb9a440785b66e93a8ef6c5, type: 2}
+  batterySO: {fileID: 11400000, guid: 280b708a4c6834d0f9d99aef3d67b50f, type: 2}
+  solarPanelSO: {fileID: 11400000, guid: 789e9b0ddf67b495d94e0b3712c05e50, type: 2}
+  windTurbineSO: {fileID: 11400000, guid: 5a2e5975a68234bcc8cd397d9e32e866, type: 2}
+  invertorSO: {fileID: 11400000, guid: a50ef1b03a1df44139dac9cba88bd7ad, type: 2}
+  hybirdChargeControllerSO: {fileID: 11400000, guid: 87feecf1990f143649bddaa8654e3d73,
+    type: 2}
+  powerLinesSO: {fileID: 11400000, guid: 6d310c18b6f01dd4782b634676ea3f30, type: 2}

@@ -1,1 +1,1 @@
-# EnergyGame
+# EnergySystemSimulationGame

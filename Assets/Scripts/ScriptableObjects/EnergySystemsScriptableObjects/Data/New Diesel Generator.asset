@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b9a118bfda334ea69989324e880f27e, type: 3}
+  m_Name: New Diesel Generator
+  m_EditorClassIdentifier: 
+  objectIcon: {fileID: 21300000, guid: 14e95a18fe14d47efa707f4a26527ca9, type: 3}
+  objectName: Diesel Generator
+  objectType: Energy
+  objectDescription: The diesel generator will be directly connected to the load.
+    The battery will NOT be charged by the generator.
+  objectPrefab: {fileID: 5557542593465639762, guid: 1788cbf0e1c66402da8e19b20e02b510,
+    type: 3}
+  purchaseCost: 10000
+  sellPrice: 0
+  purchaseExperience: 0
+  fuelAmount: 60
+  batteryStorageAmount: 0
+  powerGeneratedRate: 22
+  powerGeneratedAmount: 0
+  efficiency: 0
+  emissionRate: 1.27
+  emissionGeneratedAmount: 0
+  powerInputRate: 0
+  powerOutputRate: 0
+  incomeRate: 0
+  upkeepCost: 0
+  isConnectedToSolarPanel: 0
+  isConnectedToChargeController: 0
+  isConnectedToInvertor: 0
+  isConnectedToWindTurbine: 0
+  isConnectedToBattery: 0
+  isTurnedOn: 0
+  isRunning: 0
+  purchaseFuelBtn: {fileID: 0}
+  maintenanceBtn: {fileID: 0}
+  objectWidth: 10
+  objectHeight: 10
+  objectLength: 10
