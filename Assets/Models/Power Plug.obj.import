@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckn3qiv7r277"
+path="res://.godot/imported/Power Plug.obj-5164baa14aae91f993c5dcc9c7223bab.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Power Plug.obj-5164baa14aae91f993c5dcc9c7223bab.mesh"]
+
+source_file="res://EnergyGame/Assets/Models/Power Plug.obj"
+dest_files=["res://.godot/imported/Power Plug.obj-5164baa14aae91f993c5dcc9c7223bab.mesh", "res://.godot/imported/Power Plug.obj-5164baa14aae91f993c5dcc9c7223bab.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

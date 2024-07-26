@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Assets.Scripts.Models;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -165,10 +166,10 @@ public class PowerHelper
         //RefreshValues();
     }
 
-    public void CalculateRenewablesOutput(IEnumerable<EnergySystemGeneratorBaseSO> objects, float period, float poa)
+    public void CalculateRenewablesOutput(IEnumerable<EnergySystemGeneratorBaseSO> objects, float period, WeatherData weatherData)
     {
-        UpdateEnergySystemInfo(objects, period, poa);
-        float renewablesOutputRate = GetRenewablesOutputRate(GetRenewablesData(objects));
+        UpdateEnergySystemInfo(objects, period, weatherData.SolarIrradiance);
+        float renewablesOutputRate = GetRenewablesOutputRate(GetRenewablesData(objects), weatherData);
 
         if (isBatteryRunning && isChargeControllerExisted && isInvertorExisted && isInverterSwitchOnBreaker && isInvertorRunning)
         {
@@ -374,12 +375,12 @@ public class PowerHelper
         return renewablesData;
     }
 
-    private float GetRenewablesOutputRate(List<EnergySystemGeneratorBaseSO> renewablesData)
+    private float GetRenewablesOutputRate(List<EnergySystemGeneratorBaseSO> renewablesData, WeatherData weatherData)
     {
         float renewablesOutputRate = 0;
         foreach (var obj in renewablesData)
         {
-            renewablesOutputRate += obj.powerGeneratedRate;
+            renewablesOutputRate += obj.GetPowerOutput(weatherData);
         }
         //Debug.Log("Renewables Output: " + renewablesOutputRate);
         return renewablesOutputRate;

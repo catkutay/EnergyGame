@@ -1,30 +1,42 @@
+using Assets.Scripts.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System.Runtime.InteropServices.ComTypes;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using static UnityEngine.Networking.UnityWebRequest;
 
 public class WeatherDataController : MonoBehaviour
 {
     public UIController uIController;
-    float poa;
+    WeatherData data;
 
-    public float Poa { get => poa; set => poa = value; }
+    public WeatherData Data { get => data; set => data = value; }
 
     public void GetData(int i) => StartCoroutine(GetData_Coroutine(i));
 
     IEnumerator GetData_Coroutine(int i)
     {
-        string api = "http://eri.teachingforchange.edu.au/weatherapi/data";
+        //Debug.Log($"Weather Api Call for Index: {i}");
+        string api = "http://eri.teachingforchange.edu.au/weather/api";
         //string api = "http://127.0.0.1:8000/weatherapi/data";
-        string apiWithDataId = api + "/" + i;
+        string apiWithDataId = api + $"?format=json&id={i}";
         using (UnityWebRequest request = UnityWebRequest.Get(apiWithDataId))
         {
             yield return request.SendWebRequest();
-            if (request.isNetworkError || request.isHttpError)
+            if (request.isNetworkError || request.isHttpError || request.downloadHandler.text.Equals("[]"))
             {
-               // Debug.Log(request.error);
+                if (data is null)
+                {
+                    data = new WeatherData();
+                }
+
+                data.RandomisedDataVariation();
             }
             else
             {
@@ -35,31 +47,9 @@ public class WeatherDataController : MonoBehaviour
 
     private void ProcessJsonData(UnityWebRequest request)
     {
-        Weather weather = JsonUtility.FromJson<Weather>(request.downloadHandler.text);
-        uIController.SetWeatherValue("Sunny", weather.TEMP_AVG, weather.POA_AVG, weather.WSPD_AVG);
-        poa = weather.POA_AVG;
-        
-    }
-}
+        var apiResponse = JsonConvert.DeserializeObject<WeatherApiResponseModel>(request.downloadHandler.text);
 
-public class Weather
-{
-    public int DataId;
-    public string Time;
-    public string Timezone;
-    public float POA_AVG;
-    public float WDIR_AVG;
-    public float WSPD_AVG;
-    public float TEMP_AVG;
-
-    public Weather(int DataId, string Time, string Timezone, float POA_AVG, float WDIR_AVG, float WSPD_AVG, float TEMP_AVG)
-    {
-        this.DataId = DataId;
-        this.Time = Time;
-        this.Timezone = Timezone;
-        this.POA_AVG = POA_AVG;
-        this.WDIR_AVG = WDIR_AVG;
-        this.WSPD_AVG = WSPD_AVG;
-        this.TEMP_AVG = TEMP_AVG;
+        data = apiResponse.ExtractWeatherData();
+        uIController.SetWeatherValue("Sunny", data.Temperature, data.SolarIrradiance, data.WindSpeed);
     }
 }
