@@ -1,3 +1,4 @@
+using Assets.Scripts.Models;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -57,6 +58,10 @@ public abstract class EnergySystemGeneratorBaseSO: ScriptableObject
         return incomeRate;
     }
 
+    public virtual float GetPowerOutput(WeatherData weatherdata)
+    {
+        return powerGeneratedRate;
+    }
   
 }
 

@@ -25,7 +25,6 @@ MonoBehaviour:
   purchaseExperience: 0
   fuelAmount: 0
   batteryStorageAmount: 0
-  powerGeneratedRate: 0.4
   powerGeneratedAmount: 0
   efficiency: 0
   emissionRate: 0
@@ -46,3 +45,8 @@ MonoBehaviour:
   objectWidth: 10
   objectHeight: 10
   objectLength: 10
+  cutInSpeed: 3.5
+  cutOutSpeed: 25
+  ratedOutputSpeed: 14
+  turbineEfficiency: 0.3
+  turbineCrossSection: 1

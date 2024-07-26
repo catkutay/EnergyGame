@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using System;
+using Assets.Scripts.Models;
 
 public class TimeController : MonoBehaviour
 {
@@ -24,23 +25,24 @@ public class TimeController : MonoBehaviour
     int maxMonth = 12;
     float timer = 0;
 
-    private float solarRadiation = 1f;
+    private WeatherData weatherData;
 
-    public float SolarRadiation { get => solarRadiation;  }
+    public WeatherData WeatherData { get => weatherData;  }
 
     public void PrepareTimeController()
     {
+        weatherData = new WeatherData();
         PrepareTimeStartingPoint();
         PrepareUI();
     }
 
     private void PrepareTimeStartingPoint()
     {
-        hr = 7;
-        day = 22;
-        month = 2;
-        year = 2020;
-        dataId = 8;
+        hr = 0;
+        day = 30;
+        month = 5;
+        year = 2019;
+        dataId = 1;
     }
 
     private void PrepareUI()
@@ -58,7 +60,7 @@ public class TimeController : MonoBehaviour
     public void UpdateTimeDateString()
     {
         weatherDataController.GetData(dataId);
-        solarRadiation = weatherDataController.Poa;
+        weatherData = weatherDataController.Data;
         if (timer >= secPerMin)
         {
             min+=minChange;
@@ -66,9 +68,9 @@ public class TimeController : MonoBehaviour
             {
                 min = 0;
                 hr++;
-                dataId++;
+                
                 weatherDataController.GetData(dataId);
-                solarRadiation = weatherDataController.Poa;
+                weatherData = weatherDataController.Data;
                 if (hr >= maxHr)
                 {
                     hr = 0;
@@ -78,6 +80,7 @@ public class TimeController : MonoBehaviour
             }
             SetTimeDateString();
             timer = 0;
+            dataId++;
         }
         else
         {

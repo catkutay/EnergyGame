@@ -1,0 +1,4 @@
+repository "EnergyGame@CDUDevops@cloud"
+  path "/"
+    smartbranch "/main/develop" 
+     

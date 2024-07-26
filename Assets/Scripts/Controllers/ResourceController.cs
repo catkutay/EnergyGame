@@ -5,6 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Michsky.UI.ModernUIPack;
+using Assets.Scripts.Models;
 
 public class ResourceController : MonoBehaviour, IResourceController
 {
@@ -68,7 +69,9 @@ public class ResourceController : MonoBehaviour, IResourceController
         meterHelper.TargetLoadRate = uIController.breakerPanelHelper.Load;
     }
 
-
+    /// <summary>
+    /// Puts the purchasing and appliance controllers into memory and begins the in-game tick invokation.
+    /// </summary>
     public void PrepareResourceController(EnergySystemObjectController purchasingObjectController, ApplianceObjectController applianceObjectController)
     {
         this.purchasingObjectController = purchasingObjectController;
@@ -79,8 +82,9 @@ public class ResourceController : MonoBehaviour, IResourceController
         //InvokeRepeating("CalculatePropertyIncome", 0, moneyCalculationInterval);
     }
 
-
-    // Update is called once per frame
+    /// <summary>
+    /// <c>Update</c> is called every frame.
+    /// </summary>
     private void Update()
     {
         timeController.UpdateTimeDateString();
@@ -166,7 +170,17 @@ public class ResourceController : MonoBehaviour, IResourceController
 
     public float GetPoA()
     {
-        return timeController.SolarRadiation;
+        return timeController.WeatherData.SolarIrradiance;
+    }
+
+    public float GetWindSpeed()
+    {
+        return timeController.WeatherData.WindSpeed;
+    }
+
+    public WeatherData GetWeatherData()
+    {
+        return timeController.WeatherData;
     }
 
     /*public void CalculateRenewablesOutput()
@@ -192,6 +206,9 @@ public class ResourceController : MonoBehaviour, IResourceController
         return false;
     }
 
+    /// <summary>
+    /// <c>TimePeriod</c> will proccess an in-game update tick.
+    /// </summary>
     public void TimePeriod()
     {
         currentPoA = GetPoA();
@@ -229,7 +246,7 @@ public class ResourceController : MonoBehaviour, IResourceController
         {
             float period = (endMin-startMin)/60;
             //Debug.Log("period: " + period);
-            powerHelper.CalculateRenewablesOutput(purchasingObjectController.GetAllObjects(), period, currentPoA);
+            powerHelper.CalculateRenewablesOutput(purchasingObjectController.GetAllObjects(), period, GetWeatherData());
             emissionHelper.CalculateEmissions(purchasingObjectController.GetAllObjects(), period);
             moneyFromGrid(period);
             //powerHelper.CalculatePowerOutput(purchasingObjectController.GetAllObjects(), period, currentPoA);

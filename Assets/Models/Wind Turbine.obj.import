@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://s5cyeacrdfci"
+path="res://.godot/imported/Wind Turbine.obj-f0abfcd5a7d77e98082d43bc1ad9114b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wind Turbine.obj-f0abfcd5a7d77e98082d43bc1ad9114b.mesh"]
+
+source_file="res://EnergyGame/Assets/Models/Wind Turbine.obj"
+dest_files=["res://.godot/imported/Wind Turbine.obj-f0abfcd5a7d77e98082d43bc1ad9114b.mesh", "res://.godot/imported/Wind Turbine.obj-f0abfcd5a7d77e98082d43bc1ad9114b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
